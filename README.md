@@ -31,22 +31,22 @@ Example payload (changes operation mode to cooling and turns on the device):
 
 ## Aircon Stat
 
-| Field                | Values                                          | Changeable? | Description              |
-|----------------------|-------------------------------------------------|-------------|--------------------------|
-| airFlow              | 0: Auto, 1-4: Fan speed                         | yes         | Fan speed                |
-| coolHotJudge         |                                                 | yes         | Vacant Property Mode     |
-| electric             |                                                 | no          |                          |
-| entrust              |                                                 | no          |                          |
-| errorCode            |                                                 | no          |                          |
-| indoorTemp           |                                                 | no          | Room temperature         |
-| isAutoHeating        |                                                 | no          |                          |
-| isSelfCleanOperation |                                                 | no          |                          |
-| isSelfCleanReset     |                                                 | no          |                          |
-| isVacantProperty     |                                                 | no          |                          |
-| modelNo              |                                                 | no          |                          |
-| operation            | 0: Off, 1: On                                   | yes         | Power state (on/off)     |
-| operationMode        | 0: Auto, 1: Cooling, 2: Heating, 3: Fan, 4: Dry | yes         | Current operation mode   |
-| outdoorTemp          |                                                 | no          | Outdoor temperature      |
-| presetTemp           |                                                 | yes         | Target temperature       |
-| windDirectionLR      | 0: Auto, 1-7                                    | yes         | Horizontal fan direction |
-| windDirectionUD      | 0: Auto, 1-4                                    | yes         | Vertical fan direction   |
+| Field                | Values                                                       | Changeable? | Description              |
+|----------------------|--------------------------------------------------------------|-------------|--------------------------|
+| airFlow              | 0: Auto, 1-4: Fan speed                                      | yes         | Fan speed                |
+| coolHotJudge         |                                                              | yes         | Vacant Property Mode     |
+| electric             |                                                              | no          |                          |
+| entrust              |                                                              | no          |                          |
+| errorCode            |                                                              | no          |                          |
+| indoorTemp           |                                                              | no          | Room temperature         |
+| isAutoHeating        |                                                              | no          |                          |
+| isSelfCleanOperation |                                                              | no          |                          |
+| isSelfCleanReset     |                                                              | no          |                          |
+| isVacantProperty     |                                                              | no          |                          |
+| modelNo              |                                                              | no          |                          |
+| operation            | 0: Off, 1: On                                                | yes         | Power state (on/off)     |
+| operationMode        | 0: Auto, 1: Cooling, 2: Heating, 3: Fan, 4: Dry              | yes         | Current operation mode   |
+| outdoorTemp          |                                                              | no          | Outdoor temperature      |
+| presetTemp           |                                                              | yes         | Target temperature       |
+| windDirectionLR      | 0: Auto, 1-6 (left, middle, right), 6: left + right, 7: spot | yes         | Horizontal fan direction |
+| windDirectionUD      | 0: Auto, 1-4 (top, middle, down)                             | yes         | Vertical fan direction   |
