@@ -48,5 +48,5 @@ Example payload (changes operation mode to cooling and turns on the device):
 | operationMode        | 0: Auto, 1: Cooling, 2: Heating, 3: Fan, 4: Dry              | yes         | Current operation mode   |
 | outdoorTemp          |                                                              | no          | Outdoor temperature      |
 | presetTemp           |                                                              | yes         | Target temperature       |
-| windDirectionLR      | 0: Auto, 1-6 (left, middle, right), 6: left + right, 7: spot | yes         | Horizontal fan direction |
-| windDirectionUD      | 0: Auto, 1-4 (top, middle, down)                             | yes         | Vertical fan direction   |
+| windDirectionLR      | 0: Auto, 1-6 (Left, Middle, Right), 6: Left + Right, 7: Spot | yes         | Horizontal fan direction |
+| windDirectionUD      | 0: Auto, 1-4 (Top, Middle, Down)                             | yes         | Vertical fan direction   |
