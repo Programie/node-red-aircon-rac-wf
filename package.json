@@ -14,8 +14,7 @@
   "license": "MIT",
   "node-red": {
     "nodes": {
-      "mitsubishi-aircon-getstat": "nodes/getstat.js",
-      "mitsubishi-aircon-setstat": "nodes/setstat.js"
+      "mitsubishi-aircon-stat": "nodes/stat.js"
     }
   },
   "repository": {
