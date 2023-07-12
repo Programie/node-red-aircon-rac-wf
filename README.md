@@ -6,6 +6,10 @@ This node is based on the [ioBroker implementation from wolkeSoftware](https://g
 
 Currently, there are two nodes available.
 
+Both nodes require at least the target host of the aircon to be configured (i.e. by hostname or IP address).
+
+Optionally, you can specify the operator ID and device ID if that is required by your device.
+
 ### mitsubishi-aircon-getstat
 
 This node is used to retrieve the current state of the air con.
