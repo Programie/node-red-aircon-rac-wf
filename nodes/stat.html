@@ -7,6 +7,14 @@
             host: {
                 value: "",
                 required: true
+            },
+            operatorId: {
+                value: "",
+                required: false
+            },
+            deviceId: {
+                value: "",
+                required: false
             }
         },
         inputs: 1,
@@ -24,6 +32,14 @@
             host: {
                 value: "",
                 required: true
+            },
+            operatorId: {
+                value: "",
+                required: false
+            },
+            deviceId: {
+                value: "",
+                required: false
             }
         },
         inputs: 1,
@@ -39,6 +55,16 @@
         <label for="node-input-host"><i class="fa fa-globe"></i> Host</label>
         <input type="text" id="node-input-host" placeholder="Host">
     </div>
+
+    <div class="form-row">
+        <label for="node-input-operatorId">Operator ID</label>
+        <input type="text" id="node-input-operatorId" placeholder="Optional Operator ID">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-deviceId">Device ID</label>
+        <input type="text" id="node-input-deviceId" placeholder="Optional Device ID">
+    </div>
 </script>
 
 <script type="text/html" data-help-name="mitsubishi-aircon-getstat">
@@ -49,6 +75,16 @@
     <div class="form-row">
         <label for="node-input-host"><i class="fa fa-globe"></i> Host</label>
         <input type="text" id="node-input-host" placeholder="Host">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-operatorId">Operator ID</label>
+        <input type="text" id="node-input-operatorId" placeholder="Optional Operator ID">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-deviceId">Device ID</label>
+        <input type="text" id="node-input-deviceId" placeholder="Optional Device ID">
     </div>
 </script>
 
