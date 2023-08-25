@@ -10,6 +10,8 @@ module.exports = function (RED) {
         node.on("input", function (msg) {
             client.getAirconStat()
                 .then((airconStat) => {
+                    msg.name = config.name;
+                    msg.host = config.host;
                     msg.payload = Object.fromEntries(Object.entries(airconStat));
 
                     node.send(msg);
@@ -37,6 +39,8 @@ module.exports = function (RED) {
 
                     client.setAirconStat()
                         .then((data) => {
+                            msg.name = config.name;
+                            msg.host = config.host;
                             msg.payload = data;
 
                             node.send(msg);
