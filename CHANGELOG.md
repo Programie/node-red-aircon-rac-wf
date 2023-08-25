@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.4 (pending)
+## 1.1.0 (pending)
 
 * Use plain object instead of map in getstat
 * Add icons for getstat and setstat nodes
