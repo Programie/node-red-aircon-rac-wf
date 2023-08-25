@@ -10,7 +10,7 @@ module.exports = function (RED) {
         node.on("input", function (msg) {
             client.getAirconStat()
                 .then((airconStat) => {
-                    msg.payload = new Map(Object.entries(airconStat));
+                    msg.payload = Object.fromEntries(Object.entries(airconStat));
 
                     node.send(msg);
                 })
