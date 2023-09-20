@@ -44,6 +44,9 @@ module.exports = function (RED) {
                             msg.payload = data;
 
                             node.send(msg);
+                        })
+                        .catch((error) => {
+                            client.handleError(error);
                         });
                 })
                 .catch((error) => {

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 (2023-09-20)
+
+* Fixed crashing Node-RED in case an error occurs while sending data in set-stat node
+
 ## 1.1.0 (2023-08-25)
 
 * Use plain object instead of map in getstat
