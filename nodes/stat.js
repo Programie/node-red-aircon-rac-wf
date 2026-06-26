@@ -5,7 +5,7 @@ module.exports = function (RED) {
         RED.nodes.createNode(this, config);
 
         let node = this;
-        let client = new Client(node, config.host, config.operatorId, config.deviceId);
+        let client = new Client(node, config.host, config.useHttps, config.operatorId, config.deviceId);
 
         node.on("input", function (msg) {
             client.getAirconStat()

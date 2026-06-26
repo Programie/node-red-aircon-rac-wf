@@ -1,27 +1,33 @@
 <script type="text/javascript">
+    const defaults = {
+        host: {
+            value: "",
+            required: true
+        },
+        useHttps: {
+            value: false,
+            required: true
+        },
+        operatorId: {
+            value: "",
+            required: false
+        },
+        deviceId: {
+            value: "",
+            required: false
+        },
+        name: {
+            value: "",
+            required: false
+        }
+    };
+
     RED.nodes.registerType("mitsubishi-aircon-getstat", {
         category: "mitsubishi-aircon",
         paletteLabel: "getstat",
         color: "#ff9b9b",
         icon: "font-awesome/fa-sign-out",
-        defaults: {
-            host: {
-                value: "",
-                required: true
-            },
-            operatorId: {
-                value: "",
-                required: false
-            },
-            deviceId: {
-                value: "",
-                required: false
-            },
-            name: {
-                value: "",
-                required: false
-            }
-        },
+        defaults: defaults,
         inputs: 1,
         outputs: 1,
         label: function () {
@@ -37,24 +43,7 @@
         paletteLabel: "setstat",
         color: "#ff9b9b",
         icon: "font-awesome/fa-sign-in",
-        defaults: {
-            host: {
-                value: "",
-                required: true
-            },
-            operatorId: {
-                value: "",
-                required: false
-            },
-            deviceId: {
-                value: "",
-                required: false
-            },
-            name: {
-                value: "",
-                required: false
-            }
-        },
+        defaults: defaults,
         inputs: 1,
         outputs: 1,
         label: function () {
@@ -70,6 +59,11 @@
     <div class="form-row">
         <label for="node-input-host"><i class="fa fa-globe"></i> Host</label>
         <input type="text" id="node-input-host" placeholder="Host">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-useHttps">Use HTTPS</label>
+        <input type="checkbox" id="node-input-useHttps" style="margin-top: 0; display:inline-block; width:auto;"/>
     </div>
 
     <div class="form-row">
