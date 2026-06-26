@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.0] - pending
+
+* Add support for aircon devices requiring HTTPS instead of HTTP (#17)
+
 ## [1.1.1] - 2023-09-20
 
 * Fixed crashing Node-RED in case an error occurs while sending data in set-stat node
