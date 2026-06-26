@@ -3,7 +3,7 @@ name: Build and release package
 on: push
 
 env:
-  NODE_VERSION: '16.x'
+  NODE_VERSION: '24.x'
 
 jobs:
   build:
