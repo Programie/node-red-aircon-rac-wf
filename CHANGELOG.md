@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.2.0] - pending
+## [1.2.0] - 2026-06-27
 
 * Add support for aircon devices requiring HTTPS instead of HTTP (#17)
 
