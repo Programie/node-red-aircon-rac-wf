@@ -29,5 +29,4 @@ Now you should find the getstat and setstat nodes in the palette list.
 * Make sure to update the version in [package.json](package.json) and execute `npm update` to also update the lock file
 * Update the release notes in [CHANGELOG.md](CHANGELOG.md)
 * Create a new git tag and push it
-* Execute `npm publish` to release the new version to npmjs
-* Update the node on the [Node-RED Library](https://flows.nodered.org)
+* Update the node in the [Node-RED Library](https://flows.nodered.org)
