@@ -12,15 +12,15 @@ Optionally, you can specify the operator ID and device ID if that is required by
 
 ### mitsubishi-aircon-getstat
 
-This node is used to retrieve the current state of the air con.
+This node is used to retrieve the current state of the aircon.
 
 Any input is ignored. The decoded state is written to the `payload` property of the message.
 
 ### mitsubishi-aircon-setstat
 
-This node is used to change the current state of the air con.
+This node is used to change the current state of the aircon.
 
-The payload sent to this node is encoded and transferred to the air con.
+The payload sent to this node is encoded and transferred to the aircon.
 
 You may specify any property contained in the `payload` property returned by the `mitsubishi-aircon-getstat` node.
 
