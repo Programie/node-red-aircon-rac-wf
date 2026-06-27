@@ -2,6 +2,9 @@ name: Build and release package
 
 on: push
 
+permissions:
+  id-token: write
+
 env:
   NODE_VERSION: '24.x'
 
@@ -42,5 +45,3 @@ jobs:
         with:
           body: ${{ steps.extract-release-notes.outputs.release_notes }}
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
