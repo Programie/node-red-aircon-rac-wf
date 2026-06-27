@@ -1,15 +1,11 @@
 const Client = require("../lib/Client.js");
 
-function getClient(node, config) {
-    return new Client(node, config.host, config.useHttps, config.operatorId, config.deviceId);
-}
-
 module.exports = function (RED) {
     function GetStatNode(config) {
         RED.nodes.createNode(this, config);
 
         let node = this;
-        let client = getClient(node, config);
+        let client = new Client(node, config);
 
         node.on("input", function (msg) {
             client.getAirconStat()
@@ -32,7 +28,7 @@ module.exports = function (RED) {
         RED.nodes.createNode(this, config);
 
         let node = this;
-        let client = getClient(node, config);
+        let client = new Client(node, config);
 
         node.on("input", function (msg) {
             client.getAirconStat()
