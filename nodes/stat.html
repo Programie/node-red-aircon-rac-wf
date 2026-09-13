@@ -4,9 +4,15 @@
             value: "",
             required: true
         },
+        protocol: {
+            value: "auto",
+            required: true
+        },
+        // Kept so that nodes configured before the protocol became a choice
+        // can be migrated in oneditprepare below.
         useHttps: {
             value: false,
-            required: true
+            required: false
         },
         operatorId: {
             value: "",
@@ -22,6 +28,15 @@
         }
     };
 
+    // A node saved before the protocol became a choice has no protocol set. An
+    // explicitly ticked "Use HTTPS" was a deliberate choice and is carried
+    // over; its unticked default was not, so detection takes over there.
+    function migrateProtocol() {
+        if (!this.protocol) {
+            $("#node-input-protocol").val(this.useHttps ? "https" : "auto");
+        }
+    }
+
     RED.nodes.registerType("mitsubishi-aircon-getstat", {
         category: "mitsubishi-aircon",
         paletteLabel: "getstat",
@@ -35,7 +50,8 @@
         },
         labelStyle: function () {
             return this.name ? "node_label_italic" : "";
-        }
+        },
+        oneditprepare: migrateProtocol
     });
 
     RED.nodes.registerType("mitsubishi-aircon-setstat", {
@@ -51,7 +67,8 @@
         },
         labelStyle: function () {
             return this.name ? "node_label_italic" : "";
-        }
+        },
+        oneditprepare: migrateProtocol
     });
 </script>
 
@@ -62,8 +79,12 @@
     </div>
 
     <div class="form-row">
-        <label for="node-input-useHttps">Use HTTPS</label>
-        <input type="checkbox" id="node-input-useHttps" style="margin-top: 0; display:inline-block; width:auto;"/>
+        <label for="node-input-protocol">Protocol</label>
+        <select id="node-input-protocol">
+            <option value="auto">Detect automatically</option>
+            <option value="http">HTTP</option>
+            <option value="https">HTTPS</option>
+        </select>
     </div>
 
     <div class="form-row">
@@ -84,6 +105,7 @@
 
 <script type="text/html" data-help-name="mitsubishi-aircon-getstat">
     <p>Retrieve state from a Mitsubishi Aircon.</p>
+    <p>Modules ship with one of two firmware branches, one speaking plain HTTP on port 51443 and the other TLS. <b>Detect automatically</b> tries both on the first request and remembers what worked.</p>
 </script>
 
 <script type="text/html" data-template-name="mitsubishi-aircon-setstat">
@@ -93,8 +115,12 @@
     </div>
 
     <div class="form-row">
-        <label for="node-input-useHttps">Use HTTPS</label>
-        <input type="checkbox" id="node-input-useHttps" style="margin-top: 0; display:inline-block; width:auto;"/>
+        <label for="node-input-protocol">Protocol</label>
+        <select id="node-input-protocol">
+            <option value="auto">Detect automatically</option>
+            <option value="http">HTTP</option>
+            <option value="https">HTTPS</option>
+        </select>
     </div>
 
     <div class="form-row">
@@ -115,4 +141,5 @@
 
 <script type="text/html" data-help-name="mitsubishi-aircon-setstat">
     <p>Change state of a Mitsubishi Aircon.</p>
+    <p>Modules ship with one of two firmware branches, one speaking plain HTTP on port 51443 and the other TLS. <b>Detect automatically</b> tries both on the first request and remembers what worked.</p>
 </script>

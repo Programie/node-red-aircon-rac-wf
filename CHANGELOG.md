@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Detect automatically whether the aircon speaks HTTP or HTTPS, instead of requiring the protocol to be picked by hand (#17)
+
 ## [1.2.0] - 2026-06-27
 
 * Add support for aircon devices requiring HTTPS instead of HTTP (#17)

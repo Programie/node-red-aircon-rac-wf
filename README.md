@@ -10,6 +10,8 @@ Both nodes require at least the target host of the aircon to be configured (i.e.
 
 Optionally, you can specify the operator ID and device ID if that is required by your device.
 
+Modules ship with one of two firmware branches: older ones speak plain HTTP on port 51443, newer ones TLS. The protocol setting defaults to detecting which one applies on the first request, and can be set to HTTP or HTTPS to skip that.
+
 ### mitsubishi-aircon-getstat
 
 This node is used to retrieve the current state of the aircon.
